@@ -5,6 +5,7 @@
   box-sizing: border-box;
   text-decoration: none;
   transition: all 0.4s ease;
+  scroll-behavior: smooth;
 }
 section{
     padding-top: 50px;
@@ -369,13 +370,107 @@ section .title span::before{
 /* publication css */
 .publications{
     background: #c5e6f0;
-    padding-top: 10px;
+    padding-top: 40px;
 }
 .publications-container{
     font-size: 18px;
     padding: 1rem;
     padding-left: 3.5rem;
 }
+/* contact css */
+.contact{
+    background:#c5e6f0;
+    padding-bottom: 30px;
+
+}
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 0 15%;
+    
+}
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg,#fff,#4070F4);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #4070F4;
+}
+
+.contact-item h3 {
+    margin-bottom: 5px;
+    color: #4070F4;
+}
+
+.contact-item a {
+    color: #000000;
+    text-decoration: none;
+    transition: 1s ease;
+}
+
+.contact-item a:hover {
+    color: #0d4bf5;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.form-group input,.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+    background-color: #dfdbdb58;
+    color: #000000;
+    border: 1px solid #292828
+}
+.form-group input:focus,.form-group textarea:focus {
+    border-color: #4070F4;
+    outline: none;
+    box-shadow: 0 0 0 3px #6c63ff1a
+}
+.form-group input::placeholder,.form-group textarea::placeholder {
+    color: #000000;
+    opacity: .8
+}
+.contact-form .submit-button {
+    background: linear-gradient(to right,#4070F4,#092470);
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px #574ef64d;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px #6c63ff66
+}
+
+/* footer css */
 footer {
     background-color: #4d79f5;
     padding: 10px 0;
@@ -389,6 +484,10 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center
+}
+.social-links {
+    display: flex;
+    gap: 20px
 }
 .social-links a {
     color: var(--dark-gray);
