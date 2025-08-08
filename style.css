@@ -7,6 +7,10 @@
   transition: all 0.4s ease;
   scroll-behavior: smooth;
 }
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 section{
     padding-top: 50px;
 }
@@ -151,6 +155,7 @@ nav .menu-btn{
     padding-left: 30px;
     padding-right: 30px;
     font-family: 'Poppins', sans-serif;
+    gap: 30px;
 }
 section .title{
     display: flex;
@@ -187,10 +192,10 @@ section .title span::before{
     margin: 0 auto;
     max-width: 600px;
 }
-.about .button{
+.about .button {
     display: flex;
     justify-content: center;
-    margin: 14px 0;
+    margin: 24px 0 14px;
 }
 .about .button button{
     outline: none;
@@ -268,6 +273,7 @@ section .title span::before{
     border-radius: 8px;
     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
     gap: 20px;
+    margin-bottom: 20px;
     
 }
 
@@ -384,9 +390,10 @@ section .title span::before{
 
 }
 .contact-content {
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    justify-content: space-between;
+    gap: 30px;
     padding: 0 15%;
     
 }
@@ -406,7 +413,7 @@ section .title span::before{
     width: 60px;
     height: 60px;
     background: linear-gradient(135deg,#fff,#4070F4);
-    border-radius: 50%;
+    border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -430,6 +437,7 @@ section .title span::before{
 }
 
 .contact-form {
+    flex: 0.68;
     display: flex;
     flex-direction: column;
     gap: 20px
@@ -537,17 +545,33 @@ footer {
     .home .text .text-three{
         font-size: 34px;
     }
+    .contact-content{
+        flex-direction: column;
+    }
 }
 @media(max-width: 720px){
     .skills-content {
         flex-direction: column;
     } 
 }
-@media(max-width: 420px){
-     .home .text .text-two{
-        font-size: 54px;
-    }
-    .home .text .text-three{
-        font-size: 33px;
-    }
+@media(max-width: 430px){
+    .home .text .text-two {
+    font-size: 42px;
+  }
+  .home .text .text-three {
+    font-size: 28px;
+  }
+  .home .button button {
+    font-size: 18px;
+    padding: 6px 12px;
+  }
+  nav .navbar .logo a {
+    font-size: 28px;
+  }
+  .about .about-text p {
+    font-size: 15px;
+  }
+  .about .button button {
+    font-size: 15px;
+  }
 }
