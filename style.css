@@ -383,9 +383,9 @@ section .title span::before{
     padding: 1rem;
     padding-left: 3.5rem;
 }
-/* ...existing code... */
+/* certificates css */
 .certificates-container {
-    padding: 1rem 3.5rem;
+    padding: 1rem 5.5rem;
     font-size: 18px;
 }
 .certificates-list {
