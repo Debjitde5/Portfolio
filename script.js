@@ -76,7 +76,17 @@ window.onscroll = function () {
         nav.classList.remove("sticky");
     }
 };
-
+document.addEventListener("DOMContentLoaded", function () {
+    const viewWorkBtn = document.querySelector('.home .button button');
+    if (viewWorkBtn) {
+        viewWorkBtn.addEventListener('click', function () {
+            const projectsSection = document.getElementById('projects');
+            if (projectsSection) {
+                projectsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+});
 // Contact form validation and XSS prevention
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
