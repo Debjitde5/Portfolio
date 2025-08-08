@@ -577,26 +577,32 @@ footer {
 @media(max-width: 720px){
     .skills-content {
         flex-direction: column;
+    }
+    .publications-container{
+        font-size: 16px;
     } 
 }
 @media(max-width: 430px){
     .home .text .text-two {
-    font-size: 42px;
-  }
-  .home .text .text-three {
-    font-size: 28px;
-  }
-  .home .button button {
-    font-size: 18px;
-    padding: 6px 12px;
-  }
-  nav .navbar .logo a {
-    font-size: 28px;
-  }
-  .about .about-text p {
-    font-size: 15px;
-  }
-  .about .button button {
-    font-size: 15px;
-  }
+        font-size: 42px;
+    }
+    .home .text .text-three {
+        font-size: 28px;
+    }
+    .home .button button {
+        font-size: 18px;
+        padding: 6px 12px;
+    }
+    nav .navbar .logo a {
+        font-size: 28px;
+    }
+    .about .about-text p {
+        font-size: 15px;
+    }
+    .about .button button {
+        font-size: 15px;
+    }
+    .publications-container{
+        font-size: 14px;
+    } 
 }
