@@ -599,6 +599,10 @@ footer {
     .home .text .text-three{
         font-size: 35px;
     }
+    .home .profile-image {
+        width: 280px;
+        height: 280px;
+    }
 }
 @media (max-width: 768px) {
     .project-card {
