@@ -92,22 +92,40 @@ nav .menu-btn{
 }
 
 /* Home Section */
-.home{
+.home {
     height: 100vh;
     width: 100%;
     background: url("elevated-view-laptop-stationeries-blue-backdrop.webp") no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    font-family:'Ubuntu',sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.home .home-content{
-    height: 100%;
-    width: 90%;
-    margin:auto;
+.home .home-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+    min-height: 500px;
+}
+.home .text {
+    flex: 0 1 60%;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
+    min-width: 0;
+    text-align: left;
 }
 .home .text .text-one{
     font-size: 25px;
@@ -125,7 +143,11 @@ nav .menu-btn{
     margin: 5px 0;
 }
 .home .button{
-    margin: 14px 0;
+    margin: 24px 0 0 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
 }
 .btn{
     display: inline-block;
@@ -140,11 +162,29 @@ nav .menu-btn{
     transition: all 0.4s ease;
     text-decoration: none;
     text-align: center;
+    margin-left: 0;
 }
 .btn:hover{
     color: #4070F4;
     background-color: #FFF;
     border-color: #4070F4;
+}
+.home .image {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+}
+.home .profile-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%; /* Make image circular */
+    border: 6px solid #4070f47a;
+    box-shadow: 0 4px 24px #4070f44d;
+    background: #fff;
+    display: block;
 }
 /* about me section */
 .about{
@@ -538,6 +578,28 @@ footer {
 }
 
 /* Responsive media query */
+@media (max-width: 900px) {
+    .home .home-content {
+        flex-direction: column-reverse; /* Image on top, text below */
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        min-height: unset;
+    }
+    .home .text {
+        align-items: center;
+        text-align: center;
+    }
+    .home .button {
+        justify-content: center;
+    }
+    .home .text .text-two{
+        font-size: 70px;
+    }
+    .home .text .text-three{
+        font-size: 35px;
+    }
+}
 @media (max-width: 768px) {
     .project-card {
         flex-direction: column; 
@@ -645,6 +707,10 @@ footer {
     .home .btn{
         font-size: 16px;
         padding: 4px 10px;
+    }
+    .home .profile-image {
+        width: 250px;
+        height: 250px;
     }
     nav .navbar .logo a {
         font-size: 24px;
